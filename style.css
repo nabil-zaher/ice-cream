@@ -1,0 +1,198 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary:#fa7268;
+    --yellow:#f9eab5;
+    --text-dark:#1f3c36;
+    --bg-color:#ff8ff8;
+    --button-radius:25px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body::-webkit-scrollbar{width: 10px;}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+header{
+    background: #FFF;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 28px;
+    font-weight: 900;
+}
+header .logo img{
+    /* vertical-align:baseline; */
+    vertical-align: text-bottom;
+    width: 50px;
+}
+header .logo span{
+    color: var(--primary);
+}
+header .links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .links ul{
+    display: flex;
+    gap: 20px;
+}
+header .links ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-dark);
+    transition: .5s;
+}
+header .links ul li a:hover{
+    color: var(--primary);
+}
+header .links .btn{
+    margin-left: 2rem;
+    padding: 15px 25px;
+    background: var(--primary);
+    border: none;
+    border-radius: 15px;
+    color: #FFF;
+    cursor: pointer;
+    transition: .5s;
+}
+header .links .btn:hover{
+    background: #000;
+}
+
+
+.hero{
+    position: relative;
+    background: var(--yellow);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10%;
+    overflow: hidden;
+}
+
+.hero .hero-img{
+    justify-self: end;
+}
+.hero .hero-img img{
+    width: 30vw;
+}
+
+@media (max-width:996px) {
+    .hero .hero-img{
+    justify-self: center;
+    margin-top: 4rem;
+}
+.hero .hero-img img{
+    width: 50vw;
+}
+}
+
+.hero .hero-text,
+.hero .hero-img{
+    z-index: 100;
+}
+.hero .hero-text h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--text-dark);
+}
+.hero .hero-text h1 span{
+    background: var(--primary);
+    color: #FFF;
+    padding: 10px 20px;
+    margin-right: 1rem;
+    border-radius: 15px;
+}
+.hero .hero-text p{
+    margin: 2rem 0;
+}
+.btn{
+    padding: 15px 25px;
+    background: var(--primary);
+    color: #FFF;
+    border: none;
+    border-radius: var(--button-radius);
+    transition: .5s;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #000;
+}
+
+.hero .shapeL{
+    position: absolute;
+    bottom: -28rem;
+    left: -5rem;
+    font-size: 29rem;
+    color:#FFF;
+    transform: rotate(30deg);
+}
+
+.hero .shapeR{
+    position: absolute;
+    bottom: -28rem;
+    right: -5rem;
+    font-size: 29rem;
+    color:#FFF;
+     transform: rotate(-30deg);
+}
+
+.grid-system{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap:1rem
+}
+
+.about{
+    padding: 2rem 10%;
+}
+
+.about .about-img img{
+    width: 30vw;
+    border-radius: 5px;
+}
+.about .about-text{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.about .about-text h2{
+    font-size: 35px;
+    font-weight: 900;
+}
+.about .about-text h2 span{
+    background: var(--primary);
+    color: #FFF;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: .5rem;
+    border-radius: 15px;
+}
+.about .about-text p{
+    margin: 1.5rem 0;
+}
